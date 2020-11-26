@@ -5,42 +5,24 @@ import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 
 // Our custom easing
-let easing = [0.6, -0.05, 0.01, 0.99]
-const fadeInUp = {
-	initial: {
-		y: 60,
-		opacity: 0,
-		transition: { duration: 0.6, ease: easing },
-	},
-	animate: {
-		y: 0,
-		opacity: 1,
-		transition: {
-			duration: 1.6,
-			ease: easing,
-		},
-	},
-}
-const stagger = {
-	animate: {
-		transition: {
-			staggerChildren: 0.1,
-		},
-	},
-}
 
+const container = {
+	hidden: { opacity: 0, scale: 0 },
+	visible: {
+		opacity: 1,
+		scale: 1,
+		transition: {
+			delayChildren: 0.8,
+			staggerChildren: 0.5,
+		},
+	},
+}
 export default function Home() {
 	return (
 		<>
 			<motion.div
 				animate={{
-					// 	//x: 0,
 					backgroundColor: '#000',
-					// 	boxShadow: '10px 10px 0 rgba(0, 0, 0, 0.2)',
-					// 	//position: 'fixed',
-					// 	// transitionEnd: {
-					// 	// 	display: 'none',
-					//	 },
 				}}
 				transition={{ duration: 2 }}
 				className={styles.container}
@@ -51,56 +33,24 @@ export default function Home() {
 				</Head>
 
 				<main className={styles.main}>
-					<motion.h1
-						animate={{ opacity: 1 }}
-						initial={{ opacity: 0 }}
-						transition={{ duration: 5 }}
-						className='title'
-						className={styles.title}
+					<motion.div
+						animate={{ opacity: 1, y: 0 }}
+						initial={{ opacity: 0, y: 50 }}
+						transition={{ duration: 0.5 }}
+						className={styles.titleContainer}
 					>
 						{' '}
-						Welcome <br /> MiSt Production
-					</motion.h1>
+						<h1 className={styles.title}>
+							Welcome <br /> MiSt Production
+						</h1>
+					</motion.div>
 					<motion.div
-						style={{ display: 'flex', flexDirection: 'row' }}
-						variants={stagger}
+						variants={container}
+						initial='hidden'
+						animate='visible'
+						className={styles.linkBoxContainer}
 					>
-						<Link href='/puslapis'>
-							<motion.div
-								variants={fadeInUp}
-								whileHover={{ scale: 1.05 }}
-								whileTap={{ scale: 0.95 }}
-							>
-								<div>
-									<h4 style={{ color: 'red' }}>vardas</h4>
-									<span style={{ color: 'red' }}>kaina</span>
-								</div>
-							</motion.div>
-						</Link>
-						<Link href='/puslapis'>
-							<motion.div
-								variants={fadeInUp}
-								whileHover={{ scale: 1.05 }}
-								whileTap={{ scale: 0.95 }}
-							>
-								<div>
-									<h4 style={{ color: 'red' }}>vardas</h4>
-									<span style={{ color: 'red' }}>kaina</span>
-								</div>
-							</motion.div>
-						</Link>
-						<Link href='/puslapis'>
-							<motion.div
-								variants={fadeInUp}
-								whileHover={{ scale: 1.05 }}
-								whileTap={{ scale: 0.95 }}
-							>
-								<div>
-									<h4 style={{ color: 'red' }}>vardas</h4>
-									<span style={{ color: 'red' }}>kaina</span>
-								</div>
-							</motion.div>
-						</Link>
+						<LinkBox />
 					</motion.div>
 				</main>
 			</motion.div>
