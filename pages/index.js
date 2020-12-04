@@ -4,17 +4,24 @@ import LinkBox from '../components/LinkBox'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 
-// Our custom easing
-
 const container = {
-	hidden: { opacity: 0, scale: 0 },
+	hidden: { opacity: 0, y: 50 },
 	visible: {
 		opacity: 1,
-		scale: 1,
-		transition: {
-			delayChildren: 0.8,
-			staggerChildren: 0.5,
-		},
+		y: 0,
+		// transition: {
+		// 	delayChildren: 2,
+		// 	staggerChildren: 0.5,
+		// 	duration: 5,
+		// },
+	},
+}
+
+const item = {
+	hidden: { y: 50, opacity: 0 },
+	visible: {
+		y: 0,
+		opacity: 1,
 	},
 }
 export default function Home() {
@@ -24,7 +31,7 @@ export default function Home() {
 				animate={{
 					backgroundColor: '#000',
 				}}
-				transition={{ duration: 2 }}
+				transition={{ duration: 0.5 }}
 				className={styles.container}
 			>
 				<Head>
@@ -34,22 +41,44 @@ export default function Home() {
 
 				<main className={styles.main}>
 					<motion.div
-						animate={{ opacity: 1, y: 0 }}
-						initial={{ opacity: 0, y: 50 }}
-						transition={{ duration: 0.5 }}
+						variants={container}
+						transition={{
+							delayChildren: 2,
+							staggerChildren: 0.5,
+							duration: 4,
+						}}
+						initial='hidden'
+						animate='visible'
 						className={styles.titleContainer}
 					>
-						{' '}
-						<h1 className={styles.title}>
-							Welcome <br /> MiSt Production
-						</h1>
+						<motion.h1
+							variants={item}
+							//transition={{ duration: 1 }}
+							className={styles.title}
+						>
+							MiSt
+						</motion.h1>
+						<motion.h1
+							variants={item}
+							className={styles.title}
+							className={styles.title}
+						>
+							production
+						</motion.h1>
 					</motion.div>
 					<motion.div
 						variants={container}
+						transition={{
+							delayChildren: 3,
+							staggerChildren: 0.5,
+							duration: 2,
+						}}
 						initial='hidden'
 						animate='visible'
 						className={styles.linkBoxContainer}
 					>
+						<LinkBox />
+						<LinkBox />
 						<LinkBox />
 					</motion.div>
 				</main>

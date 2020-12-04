@@ -13,16 +13,16 @@ const item = {
 function LinkBox() {
 	return (
 		<>
-			<motion.div
-				variants={item}
-				whileHover={{ scale: 1.05 }}
-				whileTap={{ scale: 0.95 }}
-				className={styles.link}
-			>
-				<Link href='/puslapis'>
+			<Link href='/puslapis'>
+				<motion.div
+					variants={item}
+					whileHover={{ scale: 1.05 }}
+					whileTap={{ scale: 0.95 }}
+					className={styles.link}
+				>
 					<a>Link</a>
-				</Link>
-			</motion.div>
+				</motion.div>
+			</Link>
 		</>
 	)
 }
