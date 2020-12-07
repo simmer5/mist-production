@@ -1,0 +1,16 @@
+$break-large: 1260px;
+$break-medium: 960px;
+
+.logoContainer {
+	padding: 1rem;
+	position: absolute;
+}
+.svg {
+	width: 35vw;
+	@media screen and (min-width: $break-medium) {
+		width: 20vw;
+	}
+	@media screen and (min-width: $break-large) {
+		width: 15vw;
+	}
+}
