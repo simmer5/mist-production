@@ -1,8 +1,12 @@
+@import './variables.scss';
+
 .link {
-	color: aliceblue;
+	color: $red;
 	padding: 1rem;
-	border: 1px solid aliceblue;
+	border: 1px solid $red;
 	//margin: 1rem;
-	width: 30vw;
+	width: 25vw;
 	text-align: center;
+	margin: 0.1rem;
+	border-radius: 5px;
 }

@@ -5,10 +5,10 @@ import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 
 const container = {
-	hidden: { opacity: 0, y: 50 },
+	hidden: { opacity: 0 },
 	visible: {
 		opacity: 1,
-		y: 0,
+		// y: 0,
 		// transition: {
 		// 	delayChildren: 2,
 		// 	staggerChildren: 0.5,
@@ -43,9 +43,9 @@ export default function Home() {
 					<motion.div
 						variants={container}
 						transition={{
-							delayChildren: 2,
-							staggerChildren: 0.5,
-							duration: 4,
+							delayChildren: 1,
+							//staggerChildren: 0.5,
+							//duration: 3,
 						}}
 						initial='hidden'
 						animate='visible'
@@ -69,9 +69,9 @@ export default function Home() {
 					<motion.div
 						variants={container}
 						transition={{
-							delayChildren: 3,
+							delayChildren: 1.5,
 							staggerChildren: 0.5,
-							duration: 2,
+							duration: 1,
 						}}
 						initial='hidden'
 						animate='visible'
