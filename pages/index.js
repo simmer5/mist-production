@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
-import LinkBox from '../components/LinkBox'
+import LinkBox from '../components/linkBox/LinkBox'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 
@@ -28,9 +28,11 @@ export default function Home() {
 	return (
 		<>
 			<motion.div
-				animate={{
-					backgroundColor: '#000',
-				}}
+				animate={
+					{
+						//backgroundColor: 'red',
+					}
+				}
 				transition={{ duration: 0.5 }}
 				className={styles.container}
 			>
@@ -44,7 +46,7 @@ export default function Home() {
 						variants={container}
 						transition={{
 							delayChildren: 1,
-							//staggerChildren: 0.5,
+							staggerChildren: 0.5,
 							//duration: 3,
 						}}
 						initial='hidden'
@@ -58,13 +60,12 @@ export default function Home() {
 						>
 							MiSt
 						</motion.h1>
-						<motion.h1
-							variants={item}
-							className={styles.title}
-							className={styles.title}
-						>
+						<motion.h1 variants={item} className={styles.title}>
 							production
 						</motion.h1>
+						<motion.h3 variants={item} className={styles.subTitle}>
+							a modern digital partner
+						</motion.h3>
 					</motion.div>
 					<motion.div
 						variants={container}
@@ -77,9 +78,7 @@ export default function Home() {
 						animate='visible'
 						className={styles.linkBoxContainer}
 					>
-						<LinkBox />
-						<LinkBox />
-						<LinkBox />
+						<LinkBox route='/services' btnText='Services' />
 					</motion.div>
 				</main>
 			</motion.div>

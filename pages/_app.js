@@ -5,9 +5,9 @@ import Logo from '../components/logos/BlueLogo'
 function MyApp({ Component, pageProps, router }) {
 	return (
 		<>
-			<AnimatePresence exitBeforeEnter>
-				<Logo />
-				<Component {...pageProps} />
+			<AnimatePresence exitBeforeEnter={false}>
+				<Logo key='logo' />
+				<Component key='components' {...pageProps} />
 			</AnimatePresence>
 		</>
 	)

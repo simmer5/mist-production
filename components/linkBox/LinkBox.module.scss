@@ -1,11 +1,11 @@
-@import './variables.scss';
+@import '../../styles/variables.scss';
 
 .link {
 	color: $red;
 	padding: 1rem;
 	border: 1px solid $red;
 	//margin: 1rem;
-	width: 25vw;
+	min-width: 25vw;
 	text-align: center;
 	margin: 0.1rem;
 	border-radius: 5px;
