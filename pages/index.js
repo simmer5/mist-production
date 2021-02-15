@@ -78,7 +78,7 @@ export default function Home() {
 						animate='visible'
 						className={styles.linkBoxContainer}
 					>
-						<LinkBox route='/services' btnText='Services' />
+						<LinkBox route='/puslapis' btnText='Linkas i puslapi' />
 					</motion.div>
 				</main>
 			</motion.div>

@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps, router }) {
 	return (
 		<>
 			<AnimatePresence exitBeforeEnter={false}>
-				<Logo key='logo' />
+				{/* <Logo key='logo' /> */}
 				<Component key='components' {...pageProps} />
 			</AnimatePresence>
 		</>
