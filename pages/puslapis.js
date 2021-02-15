@@ -27,26 +27,28 @@ const puslapis = () => {
 					Column
 				</div>
 			</div>
+			{/* ----- ROW 3 -------- */}
 			<div className={styles.row3}>
-				<div className={styles.column1} style={{ backgroundColor: 'red' }}>
-					<div>r1</div>
-					<div>
-						<div>k1</div>
-						<div>k2</div>
+				<div className={styles.column1}>
+					<div className={styles.row1}>r1</div>
+					<div className={styles.row2}>
+						<div className={styles.col1}>k1</div>
+						<div className={styles.col2}>k2</div>
 					</div>
 				</div>
 				<div className={styles.column2} style={{ backgroundColor: 'yellow' }}>
-					Column
+					Col 2
 				</div>
 			</div>
 			<div
-				style={{
-					height: '10vh',
-					display: 'flex',
-
-					backgroundColor: 'cornflowerblue',
-				}}
-			></div>
+				className={styles.row4}
+				// style={{
+				// 	height: '10vh',
+				// 	backgroundColor: 'cornflowerblue',
+				// }}
+			>
+				Footer
+			</div>
 		</div>
 	)
 }
