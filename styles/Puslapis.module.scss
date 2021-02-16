@@ -5,10 +5,10 @@
 }
 
 .container {
-	height: 100vh;
+	max-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	background-color: #12e5c9;
+	background-color: #000000;
 
 	.row1 {
 		@extend %row-style;
@@ -53,12 +53,14 @@
 				.col2 {
 					background-color: rgb(90, 62, 62);
 					flex-grow: 1;
+					z-index: 0;
 				}
 			}
 		}
 		.column2 {
 			flex: 0 0 20vw;
 			height: 30vh;
+			z-index: 1;
 		}
 	}
 	.row4 {
