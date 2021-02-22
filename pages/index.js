@@ -1,87 +1,120 @@
 import Head from 'next/head'
+import React from 'react'
 import { motion } from 'framer-motion'
-import LinkBox from '../components/linkBox/LinkBox'
-import styles from '../styles/Home.module.scss'
-import Link from 'next/link'
+import styles from '../styles/Puslapis.module.scss'
 
-const container = {
-	hidden: { opacity: 0 },
-	visible: {
-		opacity: 1,
-		// y: 0,
-		// transition: {
-		// 	delayChildren: 2,
-		// 	staggerChildren: 0.5,
-		// 	duration: 5,
-		// },
-	},
-}
-
-const item = {
-	hidden: { y: 50, opacity: 0 },
-	visible: {
-		y: 0,
-		opacity: 1,
-	},
-}
-export default function Home() {
+const Home = () => {
 	return (
 		<>
-			<motion.div
-				animate={
-					{
-						//backgroundColor: 'red',
-					}
-				}
-				transition={{ duration: 0.5 }}
-				className={styles.container}
-			>
-				<Head>
-					<title>MiSt Pro</title>
-					<link rel='icon' href='/favicon.ico' />
-				</Head>
+			<Head>
+				<title>MiSt Pro</title>
+				<link rel='icon' href='/favicon.ico' />
+			</Head>
 
-				<main className={styles.main}>
-					<motion.div
-						variants={container}
-						transition={{
-							delayChildren: 1,
-							staggerChildren: 0.5,
-							//duration: 3,
-						}}
-						initial='hidden'
-						animate='visible'
-						className={styles.titleContainer}
-					>
-						<motion.h1
-							variants={item}
-							//transition={{ duration: 1 }}
-							className={styles.title}
+			<div className={styles.container}>
+				<div className={styles.row1}>
+					<div className={styles.column1} style={{ backgroundColor: '#brrbb' }}>
+						<motion.div
+							animate={{ x: 0 }}
+							initial={{ x: -400 }}
+							transition={{ duration: 2 }}
+							style={{ height: '50%', backgroundColor: 'red' }}
 						>
-							MiSt
-						</motion.h1>
-						<motion.h1 variants={item} className={styles.title}>
-							production
-						</motion.h1>
-						<motion.h3 variants={item} className={styles.subTitle}>
-							a modern digital partner
-						</motion.h3>
+							1.1
+						</motion.div>
+						<motion.div
+							animate={{ x: 0 }}
+							initial={{ x: -400 }}
+							transition={{ duration: 2, delay: 0.7 }}
+							style={{ backgroundColor: 'blue', height: '50%' }}
+						>
+							1.2
+						</motion.div>
+					</div>
+					<motion.div
+						animate={{ y: 0 }}
+						initial={{ y: -400 }}
+						transition={{ duration: 1, delay: 0.5 }}
+						style={{ backgroundColor: 'blue', height: '50%' }}
+						className={styles.column2}
+						style={{ backgroundColor: '#bbb' }}
+					>
+						Column 2.1
+					</motion.div>
+				</div>
+				<div className={styles.row2}>
+					<motion.div
+						animate={{ height: '30vh' }}
+						initial={{ height: 0 }}
+						transition={{ duration: 1, delay: 4 }}
+						style={{ backgroundColor: 'blue', height: '50%' }}
+						className={styles.column1}
+						style={{ backgroundColor: 'greenyellow' }}
+					>
+						Column2.1
 					</motion.div>
 					<motion.div
-						variants={container}
-						transition={{
-							delayChildren: 1.5,
-							staggerChildren: 0.5,
-							duration: 1,
-						}}
-						initial='hidden'
-						animate='visible'
-						className={styles.linkBoxContainer}
+						animate={{ x: 0 }}
+						initial={{ x: '55vw' }}
+						transition={{ duration: 1.5, delay: 2.5 }}
+						className={styles.column2}
+						style={{ backgroundColor: 'mediumslateblue' }}
 					>
-						<LinkBox route='/puslapis' btnText='Linkas i puslapi' />
+						Column2.2
 					</motion.div>
-				</main>
-			</motion.div>
+				</div>
+				{/* ----- ROW 3 -------- */}
+				<div className={styles.row3}>
+					<div className={styles.column1}>
+						<motion.div
+							animate={{ x: 0 }}
+							initial={{ x: '-100vw' }}
+							transition={{ duration: 3, delay: 3 }}
+							style={{ backgroundColor: 'green', height: '50%' }}
+							className={styles.row1}
+						>
+							r1
+						</motion.div>
+						<div className={styles.row2}>
+							<motion.div
+								className={styles.col1}
+								animate={{ x: 0 }}
+								initial={{ x: '100vw' }}
+								transition={{ duration: 1, delay: 7.5 }}
+							>
+								k1
+							</motion.div>
+							<motion.div
+								animate={{ x: 0 }}
+								initial={{ x: '100vw' }}
+								transition={{ duration: 1, delay: 6.5 }}
+								className={styles.col2}
+							>
+								k2
+							</motion.div>
+						</div>
+					</div>
+					<motion.div
+						animate={{ height: '30vh' }}
+						initial={{ height: 0 }}
+						transition={{ duration: 1, delay: 6 }}
+						className={styles.column2}
+						style={{ backgroundColor: 'yellow' }}
+					>
+						Col 2
+					</motion.div>
+				</div>
+				<motion.div
+					className={styles.row4}
+					animate={{ height: '10vh' }}
+					initial={{ height: 0 }}
+					transition={{ duration: 2, delay: 5.5 }}
+				>
+					Footer
+				</motion.div>
+			</div>
 		</>
 	)
 }
+
+export default Home
