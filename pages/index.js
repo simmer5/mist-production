@@ -3,6 +3,17 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import styles from '../styles/Puslapis.module.scss'
 
+const containerTransition = {
+	x: {
+		duration: 2,
+	},
+	backgroundColor: {
+		duration: 3,
+		yoyo: Infinity,
+		ease: 'easeOut',
+		repeatDelay: 0.8,
+	},
+}
 const Home = () => {
 	return (
 		<>
@@ -15,10 +26,12 @@ const Home = () => {
 				<div className={styles.row1}>
 					<div className={styles.column1} style={{ backgroundColor: '#brrbb' }}>
 						<motion.div
-							animate={{ x: 0 }}
+							transition={containerTransition}
+							animate={{ x: 0, backgroundColor: ['#ff6699', '#6666ff'] }}
+							// animate={{ x: 0 }}
 							initial={{ x: -400 }}
-							transition={{ duration: 2 }}
-							style={{ height: '50%', backgroundColor: 'red' }}
+							// transition={{ duration: 2 }}
+							style={{ backgroundColor: 'green', height: '50%' }}
 						>
 							1.1
 						</motion.div>
