@@ -1,76 +1,66 @@
-%row-style {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
+@import './variables.scss';
 
 .container {
-	// max-height: 100%;
-	// max-width: 100vw;
-	overflow: hidden;
-	//display: flex;
-	//flex-direction: column;
+	//padding: 0 0.5rem;
+	display: flex;
+	flex-direction: column;
 
-	.row1 {
-		@extend %row-style;
-
-		.column1 {
-			flex: 0 0 25vw;
-			height: 30vh;
-		}
-		.column2 {
-			flex: 0 0 75vw;
-			height: 30vh;
-		}
-	}
-	.row2 {
-		@extend %row-style;
-
-		.column1 {
-			flex: 1;
-			height: 30vh;
-		}
-		.column2 {
-			flex: 1;
-			height: 30vh;
-		}
-	}
-	.row3 {
-		@extend %row-style;
-
-		.column1 {
-			flex: 0 0 80vw;
-			height: 30vh;
-			.row1 {
-				background-color: #12e5c9;
-				height: 50%;
-			}
-			.row2 {
-				height: 50%;
-				.col1 {
-					background-color: rgb(99, 99, 99);
-					flex-grow: 1;
-				}
-				.col2 {
-					background-color: rgb(90, 62, 62);
-					flex-grow: 1;
-					z-index: 0;
-				}
-			}
-		}
-		.column2 {
-			flex: 0 0 20vw;
-			height: 30vh;
-			z-index: 1;
-		}
-	}
-	.row4 {
-		@extend %row-style;
-		height: 10vh;
-		background-color: rgb(14, 223, 94);
-	}
+	// align-items: center;
+	//background-color: $background;
 }
 
-/* Desktop layout */
-@media (max-width: 1280px) {
+.main {
+	overflow: hidden;
+	min-height: 100vh;
+	//padding: 5rem 0;
+	// flex: 1;
+	display: flex;
+	flex-direction: column;
+	//justify-content: center;
+	//align-items: center;
+	.titleContainer {
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
+		align-items: center;
+		flex-direction: column;
+		.title {
+			text-align: center;
+			margin: 0;
+			line-height: 1.15;
+			font-size: 5rem;
+			font-weight: 900;
+			color: $blue;
+			//text-transform: uppercase;
+		}
+		.subTitle {
+			text-align: center;
+			margin: 0;
+			line-height: 2.15;
+			font-size: 1rem;
+			font-weight: 600;
+			color: $yellow;
+			//text-transform: uppercase;
+		}
+	}
+}
+.linkBoxContainer {
+	align-self: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100vw;
+	justify-content: space-around;
+	padding: 1rem;
+}
+
+@media (max-width: 760px) {
+	.main {
+		padding: 0;
+		.titleContainer {
+			.title {
+				font-size: 1.8rem;
+			}
+		}
+	}
 }

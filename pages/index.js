@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import React from 'react'
 import { motion } from 'framer-motion'
-import styles from '../styles/Puslapis.module.scss'
+
+import Logo from '../components/logo/Logo'
+import styles from '../styles/Home.module.scss'
 
 const containerTransition = {
 	x: {
@@ -12,6 +14,17 @@ const containerTransition = {
 		yoyo: Infinity,
 		ease: 'easeOut',
 		repeatDelay: 0.8,
+	},
+}
+const logoContainerTransition = {
+	x: {
+		duration: 1,
+		delay: 0.5,
+	},
+	backgroundColor: {
+		duration: 3,
+		ease: 'easeOut',
+		delay: 3,
 	},
 }
 const Home = () => {
@@ -28,12 +41,10 @@ const Home = () => {
 						<motion.div
 							transition={containerTransition}
 							animate={{ x: 0, backgroundColor: ['#ff6699', '#6666ff'] }}
-							// animate={{ x: 0 }}
 							initial={{ x: -400 }}
-							// transition={{ duration: 2 }}
 							style={{ backgroundColor: 'green', height: '50%' }}
 						>
-							1.1
+							1.1.
 						</motion.div>
 						<motion.div
 							animate={{ x: 0 }}
@@ -45,14 +56,18 @@ const Home = () => {
 						</motion.div>
 					</div>
 					<motion.div
-						animate={{ y: 0 }}
+						animate={{ y: 0, backgroundColor: ['#0070F3', '#000000'] }}
 						initial={{ y: -400 }}
-						transition={{ duration: 1, delay: 0.5 }}
-						style={{ backgroundColor: 'blue', height: '50%' }}
+						transition={logoContainerTransition}
+						// transition={{ duration: 1, delay: 0.5 }}
+						style={{ backgroundColor: '#0070F3' }}
 						className={styles.column2}
-						style={{ backgroundColor: '#bbb' }}
 					>
-						Column 2.1
+						<div className={styles.logoContainer}>
+							<div className={styles.logoWrapper}>
+								<Logo />
+							</div>
+						</div>
 					</motion.div>
 				</div>
 				<div className={styles.row2}>
