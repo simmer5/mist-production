@@ -29,29 +29,34 @@
 				justify-content: center;
 				align-items: center;
 				.logoWrapper {
-					width: 70%;
+					width: 55%;
 				}
 			}
 		}
 	}
 	.row2 {
 		@extend %row-style;
-
+		height: 30vh;
 		.column1 {
 			flex: 1;
-			height: 30vh;
 		}
 		.column2 {
 			flex: 1;
-			height: 30vh;
+			background-color: #581353;
+			.priceWrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+			}
 		}
 	}
 	.row3 {
 		@extend %row-style;
-
+		height: 30vh;
 		.column1 {
 			flex: 0 0 80vw;
-			height: 30vh;
+
 			.row1 {
 				background-color: #12e5c9;
 				height: 50%;
@@ -71,7 +76,6 @@
 		}
 		.column2 {
 			flex: 0 0 20vw;
-			height: 30vh;
 			z-index: 1;
 		}
 	}

@@ -1,8 +1,10 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import React from 'react'
 import { motion } from 'framer-motion'
 
 import Logo from '../components/logo/Logo'
+import Price from '../components/price/Price'
 import styles from '../styles/Home.module.scss'
 
 const containerTransition = {
@@ -22,7 +24,7 @@ const logoContainerTransition = {
 		delay: 0.5,
 	},
 	backgroundColor: {
-		duration: 3,
+		duration: 5,
 		ease: 'easeOut',
 		delay: 3,
 	},
@@ -40,7 +42,7 @@ const Home = () => {
 					<div className={styles.column1} style={{ backgroundColor: '#brrbb' }}>
 						<motion.div
 							transition={containerTransition}
-							animate={{ x: 0, backgroundColor: ['#ff6699', '#6666ff'] }}
+							animate={{ x: 0, backgroundColor: ['#ff6699', '#0070F3'] }}
 							initial={{ x: -400 }}
 							style={{ backgroundColor: 'green', height: '50%' }}
 						>
@@ -56,7 +58,10 @@ const Home = () => {
 						</motion.div>
 					</div>
 					<motion.div
-						animate={{ y: 0, backgroundColor: ['#0070F3', '#000000'] }}
+						animate={{
+							y: 0,
+							backgroundColor: ['#0070F3', '#000000'],
+						}}
 						initial={{ y: -400 }}
 						transition={logoContainerTransition}
 						// transition={{ duration: 1, delay: 0.5 }}
@@ -86,9 +91,14 @@ const Home = () => {
 						initial={{ x: '55vw' }}
 						transition={{ duration: 1.5, delay: 2.5 }}
 						className={styles.column2}
-						style={{ backgroundColor: 'mediumslateblue' }}
 					>
-						Column2.2
+						<div className={styles.priceWrapper}>
+							<Link href='/best-price'>
+								<a>
+									<Price />
+								</a>
+							</Link>
+						</div>
 					</motion.div>
 				</div>
 				{/* ----- ROW 3 -------- */}
