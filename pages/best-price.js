@@ -1,7 +1,7 @@
 import React from 'react'
 import Price from '../components/price/Price'
 import LogoLink from '../components/logoLink/LogoLink'
-import styles from '../styles/bestPrice.module.scss'
+import styles from '../styles/BestPrice.module.scss'
 import Cube from '../components/cube/Cube'
 
 const onePrice = () => {
