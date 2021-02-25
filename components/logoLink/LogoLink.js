@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Logo.module.scss'
+import styles from './LogoLink.module.scss'
 import Link from 'next/link'
 
 const BlueLogo = () => {
