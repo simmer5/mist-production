@@ -6,7 +6,7 @@ const BlueLogo = () => {
 	return (
 		<Link href='/'>
 			<a>
-				<div className={styles.logoContainer}>
+				<div className={styles.wrapper}>
 					<svg className={styles.svg} viewBox='0 0 445 148'>
 						<mask id='path-1-inside-1' fill='none'>
 							<path

@@ -95,7 +95,7 @@ const Home = () => {
 						<div className={styles.priceWrapper}>
 							<Link href='/best-price'>
 								<a>
-									<Price />
+									<Price price={5555} />
 								</a>
 							</Link>
 						</div>
