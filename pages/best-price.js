@@ -4,6 +4,7 @@ import LogoLink from '../components/logoLink/LogoLink'
 import styles from '../styles/BestPrice.module.scss'
 import Cube from '../components/cube/Cube'
 import MenuIcon from '../components/menuIcon/MenuIcon'
+import Card from '../components/card/Card'
 
 const BestPrice = () => {
 	return (
@@ -28,7 +29,23 @@ const BestPrice = () => {
 			</div>
 			<div className={styles.wrapper}>
 				<h1>What's included</h1>
-				<div>Wireframing, Design, Developing</div>
+				<Card
+					title='Wireframing'
+					description='A visual guide that represents the skeletal framework of a website.
+						Wireframes are created for the purpose of arranging elements to best
+						accomplish a particular purpose.'
+				/>
+				<Card
+					title='Design'
+					description='This role is mainly related to the styling and layout of pages with content, including text and images.'
+				/>
+				<Card
+					title='Development'
+					description='A visual guide that represents the skeletal framework of a website.
+						Wireframes are created for the purpose of arranging elements to best
+						accomplish a particular purpose.'
+				/>
+				<div> Design, Developing</div>
 				<h1>Extras</h1>
 				<div>Logo making, Texting</div>
 			</div>
