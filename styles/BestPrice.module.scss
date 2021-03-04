@@ -84,5 +84,14 @@
 		position: fixed;
 		top: 0;
 		padding: 1rem;
+		z-index: 1;
+	}
+	header {
+		h1 {
+			margin: 0;
+		}
+		p {
+			margin: 0;
+		}
 	}
 }

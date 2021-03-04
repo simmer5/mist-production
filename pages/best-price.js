@@ -17,9 +17,12 @@ const BestPrice = () => {
 
 			{/* </div> */}
 			<div className={styles.frontWrapper}>
-				<h1>
-					Best price <br /> one price
-				</h1>
+				<header>
+					<h1>
+						Best price <br /> one price
+					</h1>
+				</header>
+
 				<div>
 					<Price price={5555} />
 				</div>
@@ -28,7 +31,10 @@ const BestPrice = () => {
 				</span>
 			</div>
 			<div className={styles.wrapper}>
-				<h1>What's included</h1>
+				<header>
+					<h1>What's included</h1>
+				</header>
+
 				<Card
 					title='Wireframing'
 					description='A visual guide that represents the skeletal framework of a website.
@@ -45,9 +51,13 @@ const BestPrice = () => {
 						Wireframes are created for the purpose of arranging elements to best
 						accomplish a particular purpose.'
 				/>
-				<div> Design, Developing</div>
-				<h1>Extras</h1>
-				<div>Logo making, Texting</div>
+				<header>
+					<h1>Extras</h1>
+					<p>What is not included</p>
+				</header>
+				<Card color='white' title='Logo making' />
+				<Card color='white' title='Taxting' />
+				<Card color='white' title='Hosting' />
 			</div>
 
 			<div className={styles.cubeContainer}>
