@@ -39,6 +39,18 @@
 		height: 30vh;
 		.column1 {
 			flex: 1;
+			.techStackWrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				a {
+					color: #581353;
+					font-size: 3rem;
+					font-weight: 900;
+					text-align: center;
+				}
+			}
 		}
 		.column2 {
 			flex: 1;

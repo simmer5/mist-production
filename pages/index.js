@@ -82,9 +82,17 @@ const Home = () => {
 						transition={{ duration: 1, delay: 4 }}
 						style={{ backgroundColor: 'blue', height: '50%' }}
 						className={styles.column1}
-						style={{ backgroundColor: 'greenyellow' }}
+						style={{ backgroundColor: '#fff009' }}
 					>
-						Column2.1
+						<div className={styles.techStackWrapper}>
+							<Link href='/tech-stack'>
+								<a>
+									Tech
+									<br />
+									stack
+								</a>
+							</Link>
+						</div>
 					</motion.div>
 					<motion.div
 						animate={{ x: 0 }}

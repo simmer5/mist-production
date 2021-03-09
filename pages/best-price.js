@@ -19,7 +19,8 @@ const BestPrice = () => {
 			<div className={styles.frontWrapper}>
 				<header>
 					<h1>
-						Best price <br /> one price
+						Best price <br />
+						in the market
 					</h1>
 				</header>
 
@@ -32,31 +33,31 @@ const BestPrice = () => {
 			</div>
 			<div className={styles.wrapper}>
 				<header>
-					<h1>What's included</h1>
+					<h2>What's included</h2>
 				</header>
+				<div className={styles.cardWrapper}>
+					<Card
+						title='Wireframing'
+						description='A visual guide that represents the skeletal framework of a website.
+						Wireframes are created for the purpose of arranging elements to best
+						accomplish a particular purpose.'
+					/>
+					<Card
+						title='Design'
+						description='This role is mainly related to the styling and layout of pages with content, including text and images.'
+					/>
+					<Card
+						title='Development'
+						description='Development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience.'
+					/>
+				</div>
 
-				<Card
-					title='Wireframing'
-					description='A visual guide that represents the skeletal framework of a website.
-						Wireframes are created for the purpose of arranging elements to best
-						accomplish a particular purpose.'
-				/>
-				<Card
-					title='Design'
-					description='This role is mainly related to the styling and layout of pages with content, including text and images.'
-				/>
-				<Card
-					title='Development'
-					description='A visual guide that represents the skeletal framework of a website.
-						Wireframes are created for the purpose of arranging elements to best
-						accomplish a particular purpose.'
-				/>
 				<header>
 					<h1>Extras</h1>
 					<p>What is not included</p>
 				</header>
 				<Card color='white' title='Logo making' />
-				<Card color='white' title='Taxting' />
+				<Card color='white' title='Texts, translations' />
 				<Card color='white' title='Hosting' />
 			</div>
 
