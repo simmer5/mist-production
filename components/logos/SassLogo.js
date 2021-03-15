@@ -4,8 +4,8 @@ const SassLogo = () => {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
-			width='312'
-			height='184'
+			width='212'
+			height='84'
 			viewBox='0 0 512 384'
 		>
 			<path

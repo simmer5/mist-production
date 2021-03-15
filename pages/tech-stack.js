@@ -10,6 +10,7 @@ import ReactLogo from '../components/logos/ReactLogo'
 import GatsbyLogo from '../components/logos/GatsbyLogo'
 import JsLogo from '../components/logos/JsLogo'
 import SassLogo from '../components/logos/SassLogo'
+import VercelLogo from '../components/logos/VercelLogo'
 
 const TechStack = () => {
 	return (
@@ -19,12 +20,16 @@ const TechStack = () => {
 				<MenuIcon />
 			</nav>
 			<h1>Only modern tech stack</h1>
-			next.js react.js gatsby.js vercel js scss
-			<NextLogo />
-			<ReactLogo />
-			<GatsbyLogo />
-			<JsLogo />
-			<SassLogo />
+			<figure>
+				<NextLogo />
+				<ReactLogo />
+				<GatsbyLogo />
+				<JsLogo />
+				<SassLogo />
+				<VercelLogo />
+			</figure>
+			<h1>Coming soon</h1>
+			headless cms Wordpress, Strapi, Contentfull, Sanity
 		</div>
 	)
 }
