@@ -75,12 +75,16 @@ const Home = () => {
 						</div>
 					</motion.div>
 				</div>
+				{/* ===== row 2 ======================= */}
 				<div className={styles.row2}>
 					<motion.div
-						animate={{ height: '30vh' }}
-						initial={{ height: 0 }}
-						transition={{ duration: 1, delay: 4 }}
-						style={{ backgroundColor: 'blue', height: '50%' }}
+						animate={{ x: 0 }}
+						initial={{ x: '-100vw' }}
+						transition={{ duration: 1.5, delay: 2.5 }}
+						// animate={{ height: '30vh' }}
+						// initial={{ height: 0 }}
+						// transition={{ duration: 1, delay: 4 }}
+						// style={{ backgroundColor: 'blue', height: '50%' }}
 						className={styles.column1}
 						style={{ backgroundColor: '#fff009' }}
 					>
